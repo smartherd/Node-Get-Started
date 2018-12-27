@@ -1,7 +1,8 @@
 const http = require('http');
 
 const server = http.createServer((request, response) => {
-	response.end('Hello from different World\n');
+	response.write('Hello from different World\n');
+	response.end();
 });
 
 server.listen(9000, () => {
